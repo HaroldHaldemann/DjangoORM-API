@@ -3,6 +3,7 @@ from rest_framework_simplejwt.views import TokenObtainPairView
 
 from users.views import UpdatePassword
 
+
 app_name = 'users'
 urlpatterns = [
     path('login/', TokenObtainPairView.as_view(), name='login'),

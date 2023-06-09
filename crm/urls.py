@@ -2,6 +2,7 @@ from django.urls import path
 
 from crm import views
 
+
 app_name = 'crm'
 urlpatterns = [
     path('clients/', views.ClientList.as_view(), name='client_list'),

@@ -1,6 +1,6 @@
 from rest_framework import generics, permissions
 
-from .serializers import UpdatePasswordSerializer
+from users.serializers import UpdatePasswordSerializer
 
 
 class UpdatePassword(generics.UpdateAPIView):
