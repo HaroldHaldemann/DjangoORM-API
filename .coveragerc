@@ -1,0 +1,13 @@
+[run]
+branch = True
+omit =
+    */epic_events/*
+    manage.py
+    setup_env.py
+    */__init__.py
+    */migrations/*
+    */tests/*
+
+[report]
+skip_empty = True
+show_missing = True
