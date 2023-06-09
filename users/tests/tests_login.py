@@ -4,6 +4,7 @@ from rest_framework.test import APITestCase
 
 from users.models import User, MANAGEMENT, SALES, SUPPORT
 
+
 TEST_PASSWORD = 'test_password'
 LOGIN_URL = reverse('users:login')
 UPDATE_PASSWORD_URL = reverse('users:update_password')

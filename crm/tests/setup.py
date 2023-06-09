@@ -9,12 +9,8 @@ LOGIN_URL = reverse('users:login')
 
 
 class CustomAPITestCase(APITestCase):
-    """Custom API test case for crm tests"""
 
     def setUp(self):
-        """Create test users with hashed passwords
-        Load initial data from fixtures/data.json
-        """
         User.objects.create_user(
             id=1,
             username='test_manager',
@@ -40,8 +36,6 @@ class CustomAPITestCase(APITestCase):
         call_command('loaddata', 'crm/fixtures/data.json', verbosity=0)
 
     def get_token_auth_client(self, user):
-        """User token authentication
-        Returns APIClient with JWT authorization for current user """
         data = {
             'username': user.username,
             'password': TEST_PASSWORD,
@@ -54,7 +48,6 @@ class CustomAPITestCase(APITestCase):
 
     @staticmethod
     def get_id_list(queryset):
-        """Returns list of available ids in current queryset"""
         id_list = []
         for i in range(len(queryset)):
             id_list.append(queryset[i].id)

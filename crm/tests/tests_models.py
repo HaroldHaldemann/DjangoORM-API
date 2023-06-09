@@ -1,5 +1,5 @@
 from crm.models import Client, Contract, Event
-from .setup import CustomAPITestCase
+from crm.tests.setup import CustomAPITestCase
 
 
 class ModelsTests(CustomAPITestCase):
